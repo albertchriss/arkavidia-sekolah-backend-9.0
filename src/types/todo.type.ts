@@ -11,7 +11,7 @@ export const ListTodoSchema = z.array(TodoSchema);
 
 /** RESPONSE SCHEMAS */
 export const GetListTodoQuerySchema = z.object({
-	isCompleted: z.boolean().openapi({
+	isCompleted: z.enum(['true', 'false']).openapi({
 		param: {
 			in: 'query',
 			example: true,
